@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace RPN_CalcWithTests
 {
-    class RPN
+    public class RPN
     {
         //Метод возвращает true, если проверяемый символ - разделитель ("пробел" или "равно")
-        static private bool IsDelimeter(char c)
+        static public bool IsDelimeter(char c)
         {
             if ((" =".IndexOf(c) != -1))
                 return true;
             return false;
         }
-
         //Метод возвращает true, если проверяемый символ - оператор
-        static private bool IsOperator(char с)
+        static public bool IsOperator(char с)
         {
             if (("+-/*^()".IndexOf(с) != -1))
                 return true;
@@ -25,7 +24,7 @@ namespace RPN_CalcWithTests
         }
 
         //Метод возвращает приоритет оператора
-        static private byte GetPriority(char s)
+        static public byte GetPriority(char s)
         {
             switch (s)
             {
@@ -48,7 +47,7 @@ namespace RPN_CalcWithTests
             return result; //Возвращаем результат
         }
 
-        private static string GetExpression(string input)
+        public static string GetExpression(string input)
         {
             string output = string.Empty; //Строка для хранения выражения
             Stack<char> operStack = new Stack<char>(); //Стек для хранения операторов
@@ -110,7 +109,7 @@ namespace RPN_CalcWithTests
             return output; //Возвращаем выражение в постфиксной записи
         }
 
-        static private double Counting(string input)
+        static public double Counting(string input)
         {
             double result = 0; //Результат
             Stack<double> temp = new Stack<double>(); //Временный стек для решения
