@@ -24,7 +24,7 @@ namespace RPN_CalcWithTests
         }
 
         //Метод возвращает приоритет оператора
-        static private byte GetPriority(char s)
+        static public byte GetPriority(char s)
         {
             switch (s)
             {
@@ -47,7 +47,7 @@ namespace RPN_CalcWithTests
             return result; //Возвращаем результат
         }
 
-        private static string GetExpression(string input)
+        public static string GetExpression(string input)
         {
             string output = string.Empty; //Строка для хранения выражения
             Stack<char> operStack = new Stack<char>(); //Стек для хранения операторов
@@ -109,7 +109,7 @@ namespace RPN_CalcWithTests
             return output; //Возвращаем выражение в постфиксной записи
         }
 
-        static private double Counting(string input)
+        static public double Counting(string input)
         {
             double result = 0; //Результат
             Stack<double> temp = new Stack<double>(); //Временный стек для решения
