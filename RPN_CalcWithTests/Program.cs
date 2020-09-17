@@ -13,7 +13,10 @@ namespace RPN_CalcWithTests
             while (true) //Бесконечный цикл
             {
                 Console.Write("Input expression: "); //Предлагаем ввести выражение
-                Console.WriteLine(RPN.Calculate(Console.ReadLine())); //Считываем, и выводим результат
+                string input = Console.ReadLine();
+                RPN.PrintRPN(input);
+                Console.WriteLine(RPN.Calculate(input)); //Считываем, и выводим результат
+                Console.WriteLine();
             }
         }
     }

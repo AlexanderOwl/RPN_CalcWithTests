@@ -8,9 +8,6 @@ namespace RPN_CalcWithTests
 {
     class RPN
     {
-
-
-
         //Метод возвращает true, если проверяемый символ - разделитель ("пробел" или "равно")
         static private bool IsDelimeter(char c)
         {
@@ -153,5 +150,11 @@ namespace RPN_CalcWithTests
             }
             return temp.Peek(); //Забираем результат всех вычислений из стека и возвращаем его
         }
+       
+        static public void PrintRPN(string input)
+        {
+            Console.WriteLine("Stack: " + GetExpression(input));
+        }
+
     }
 }
