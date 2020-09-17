@@ -16,6 +16,14 @@ namespace RPN_CalcWithTests
             return false;
         }
 
-        
+        //Метод возвращает true, если проверяемый символ - оператор
+        static private bool IsOperator(char с)
+        {
+            if (("+-/*^()".IndexOf(с) != -1))
+                return true;
+            return false;
+        }
+
+       
     }
 }
