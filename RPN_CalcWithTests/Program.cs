@@ -15,7 +15,7 @@ namespace RPN_CalcWithTests
                 Console.Write("Input expression: "); //Предлагаем ввести выражение
                 string input = Console.ReadLine();
                 RPN.PrintRPN(input);
-                Console.WriteLine(RPN.Calculate(input)); //Считываем, и выводим результат
+                Console.WriteLine("Result: "+RPN.Calculate(input)); //Считываем, и выводим результат
                 Console.WriteLine();
             }
         }
